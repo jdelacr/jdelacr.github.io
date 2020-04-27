@@ -1,0 +1,573 @@
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+    <div id="app">
+        <v-app id="inspire">
+            <!--Navigation-->
+            <v-navigation-drawer v-model="drawer" app temporary dark fixed>
+                <v-list dense>
+                    <v-list-item @click="$vuetify.goTo(about, options)">
+                        <v-list-item-content>
+                            <v-list-item-title>About</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item @click="$vuetify.goTo(skill, options)">
+                        <v-list-item-content>
+                            <v-list-item-title>Skills</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item @click="$vuetify.goTo(experience, options)">
+                        <v-list-item-content>
+                            <v-list-item-title>Experience</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item @click="$vuetify.goTo(contact, options)">
+                        <v-list-item-content>
+                            <v-list-item-title>Contact</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                </v-list>
+            </v-navigation-drawer>
+
+            <v-app-bar app abosolute clipped-left dark :collapse="!collapseOnScroll"
+                :collapse-on-scroll="collapseOnScroll">
+                <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+                <v-spacer></v-spacer>
+                <v-toolbar-title>Jan Justyn Dela Cruz</v-toolbar-title>
+            </v-app-bar>
+
+            <!--About-->
+            <v-content>
+                <v-container id="about" style="height: 500px;" class="mt-10">
+                    <h1 class="text-center">Jan Justyn Dela Cruz</h1>
+                    <v-divider></v-divider>
+                    <p class="mt-3">Hello, welcome to my online portfolio. My name is Jan Justyn Dela Cruz. I was born
+                        in the
+                        Philippines and moved to the U.S. in 2006. I have graduated in Manassas Park High School in 2013
+                        and
+                        Northern Virginia Community College in 2016. I am currently studying at George Mason University.
+                        I will
+                        be graduating in May 2020 with a bachelor’s Science on Information Technology with a
+                        concentration of Multimedia & Web Development.</p>
+                </v-container>
+
+                <!--Skills-->
+                <v-container id="skills" style="height: 500px;">
+                    <h1>Skills</h1>
+                    <v-divider></v-divider>
+                    <div class="text-center mt-3 hidden-sm-and-up">
+                        <v-progress-circular :value="95" :size="80" :width="8" color="blue"><span class="caption">HTML</span>
+                        </v-progress-circular>
+                        <v-progress-circular :value="94" :size="80" :width="8" color="green"><span class="caption">CSS</span>
+                        </v-progress-circular>
+                        <v-progress-circular :value="80" :size="80" :width="8" color="orange"><span class="caption">Javascript</span>
+                        </v-progress-circular>
+                        <v-progress-circular :value="85" :size="80" :width="8" color="orange"><span class="caption">JQuery</span>
+                        </v-progress-circular>
+                        <v-progress-circular :value="90" :size="80" :width="8" color="blue-grey"><span class="caption">Bootstrap</span>
+                        </v-progress-circular>
+                        <v-progress-circular :value="75" :size="80" :width="8" color="green"><span class="caption">Vuejs</span>
+                        </v-progress-circular>
+                        <v-progress-circular :value="65" :size="80" :width="8" color="blue"><span class="caption">ASP.NET</span>
+                        </v-progress-circular>
+                        <v-progress-circular :value="60" :size="80" :width="8" color="blue"><span class="caption">PHP</span>
+                        </v-progress-circular>
+                        <v-progress-circular :value="50" :size="80" :width="8" color="cyan"><span class="caption">AWS</span>
+                        </v-progress-circular>
+                        <v-progress-circular :value="60" :size="80" :width="8" color="orange"><span class="caption">Swift</span>
+                        </v-progress-circular>
+                        <v-progress-circular :value="70" :size="80" :width="8" color="red"><span class="caption">JSON</span>
+                        </v-progress-circular>
+                        <v-progress-circular :value="65" :size="80" :width="8" color="blue"><span class="caption">Ajax</span>
+                        </v-progress-circular>
+                        <v-progress-circular :value="85" :size="80" :width="8" color="black"><span class="caption">Git</span>
+                        </v-progress-circular>
+                    </div>
+                    <div class="text-center mt-3 hidden-sm-and-down">
+                        <v-progress-circular :value="95" :size="150" :width="20" color="blue">HTML
+                        </v-progress-circular>
+                        <v-progress-circular :value="94" :size="150" :width="20" color="green">CSS
+                        </v-progress-circular>
+                        <v-progress-circular :value="80" :size="150" :width="20" color="orange">Javascript
+                        </v-progress-circular>
+                        <v-progress-circular :value="85" :size="150" :width="20" color="orange">JQuery
+                        </v-progress-circular>
+                        <v-progress-circular :value="90" :size="150" :width="20" color="blue-grey">Bootstrap
+                        </v-progress-circular>
+                        <v-progress-circular :value="75" :size="150" :width="20" color="green">Vuejs
+                        </v-progress-circular>
+                        <v-progress-circular :value="65" :size="150" :width="20" color="blue">ASP.NET
+                        </v-progress-circular>
+                        <v-progress-circular :value="60" :size="150" :width="20" color="blue">PHP
+                        </v-progress-circular>
+                        <v-progress-circular :value="50" :size="150" :width="20" color="cyan">AWS
+                        </v-progress-circular>
+                        <v-progress-circular :value="60" :size="150" :width="20" color="orange">Swift
+                        </v-progress-circular>
+                        <v-progress-circular :value="70" :size="150" :width="20" color="red">JSON
+                        </v-progress-circular>
+                        <v-progress-circular :value="65" :size="150" :width="20" color="blue">Ajax
+                        </v-progress-circular>
+                        <v-progress-circular :value="85" :size="150" :width="20" color="black">Git
+                        </v-progress-circular>
+                    </div>
+                </v-container>
+
+                <!--Experience-->
+                <v-container id="experience" style="height: 500px;">
+                    <h1>Experience</h1>
+                    <v-divider></v-divider>
+                    <v-card class="mt-3">
+
+                        <v-card-title>
+                            <v-avatar class="mr-3">
+                                <v-img
+                                    src="https://upload.wikimedia.org/wikipedia/en/a/a0/American_Chemical_Society_logo.svg">
+                                </v-img>
+                            </v-avatar>American Chemical Society | Web Design Intern
+                        </v-card-title>
+                        <v-card-subtitle>Washington D.C. | May 2019 - August 2019</v-card-subtitle>
+                        <v-card-text>
+                            <v-list-item>
+                                <v-list-item-content>
+                                    <v-list-item-title>• Collaborated with web designers and developers to refine the
+                                        user experience for C&EN readers.</v-list-item-title>
+                                    <v-list-item-title>• Developed wireframes, mockups, and preliminary web designs that
+                                        cab be reviewed by editors and designers.</v-list-item-title>
+                                    <v-list-item-title>• Assisted in developing online graphics, including interactive
+                                        and animated graphics, of C&EN content.</v-list-item-title>
+                                    <v-list-item-title>• Investigated tools for translating static charts and graphics
+                                        developed for C&EN’s print publication to the web,<br> as tools that can be
+                                        deployed to writers and editors to easily create their own online charts and
+                                        graphics.</v-list-item-title>
+                                    <v-list-item-title>• Brought new ideas to the design team for how to package and
+                                        present C&EN content online.</v-list-item-title>
+                                    <v-list-item-title>• Aligned the design direction and improve the page load times of
+                                        the C&EN collection landing pages.</v-list-item-title>
+                                    <v-list-item-title>• Solely responsible for developing a periodic table elements
+                                        quiz that has been showcased at C&EN’s booth at the 2019 national meeting <br>
+                                        and it has been deployed afterwards as part of C&EN’s special coverage of the
+                                        International Year of the Periodic Table.</v-list-item-title>
+                                </v-list-item-content>
+                            </v-list-item>
+                        </v-card-text>
+                    </v-card>
+                </v-container>
+
+                <!--Projects-->
+                <v-container id="projects">
+                    <h1>Experience</h1>
+                    <v-divider></v-divider>
+                    <v-expansion-panels popout class="mt-3">
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>IT 331: Web Development 1</v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>Constructed a website based on personal interests.</v-list-item>
+                                    <v-list-item>Implemented Javascripts in thep project.</v-list-item>
+                                    <v-list-item>Implemented a Cookie Clicker Game.</v-list-item>
+                                    <v-list-item>Introduced to Ajax using JSON/XML filter.</v-list-item>
+                                    <v-list-item>Introduced to jQuery and jQuery UI</v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="http://mason.gmu.edu/~jdelacr/IT331/index.html">Website</v-btn>
+                                        <v-btn color="success" class="weblink" href="https://github.com/jdelacr/IT331">
+                                            Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                IT 207: Grade Calculator
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>Created a weighted grade calculator for IT Programming using PHP.
+                                    </v-list-item>
+                                    <v-list-item><span class="RequireGMU">Requires connection to GMU*</span>
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="http://helios.vse.gmu.edu/~jdelacr/Lab1/Lab1.php">Website</v-btn>
+                                        <v-btn color="success" class="weblink" href="" disabled>Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                IT 207: Calendar
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>Created a website that lets users book a date.</v-list-item>
+                                    <v-list-item>User picks a specific time and week in order for the user to book in
+                                        the calendar.</v-list-item>
+                                    <v-list-item>Disable the radio button when a user books a time and date.
+                                    </v-list-item>
+                                    <v-list-item>Sends Email when a user successfully booked a time on the calendar.
+                                    </v-list-item>
+                                    <v-list-item><span class="RequireGMU">Requires connection to GMU*</span>
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="http://helios.vse.gmu.edu/~jdelacr/Lab2/">Website</v-btn>
+                                        <v-btn color="success" class="weblink" href="" disabled>Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                IT 207: Contact Directory
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>Created a contact directory that manipulates text files.
+                                    </v-list-item>
+                                    <v-list-item>Able to add a contact.
+                                    </v-list-item>
+                                    <v-list-item>Able to update a contact.
+                                    </v-list-item>
+                                    <v-list-item>Search contacts.
+                                    </v-list-item>
+                                    <v-list-item><span class="RequireGMU">Requires connection to GMU*</span>
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="http://helios.vse.gmu.edu/~jdelacr/Lab3/">Website</v-btn>
+                                        <v-btn color="success" class="weblink" href="" disabled>Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                IT 207: Comments
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>Created a comment web page using text files and MySQL
+                                    </v-list-item>
+                                    <v-list-item>Able to sort comments.
+                                    </v-list-item>
+                                    <v-list-item>Able to add comments.
+                                    </v-list-item>
+                                    <v-list-item>Search delete comments.
+                                    </v-list-item>
+                                    <v-list-item><span class="RequireGMU">Requires connection to GMU*</span>
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="http://helios.vse.gmu.edu/~jdelacr/Lab4/">Website</v-btn>
+                                        <v-btn color="success" class="weblink" href="" disabled>Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                Vuejs: Calculator
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>Created a calculator using Vuejs.
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="https://jdelacr.github.io/App-Projects-Vue/App-calculator/calculator.html">
+                                            Website</v-btn>
+                                        <v-btn color="success" class="weblink"
+                                            href="https://github.com/jdelacr/App-Projects-Vue/tree/master/App-calculator">
+                                            Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                Vuejs: Online Store
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>Created a simulation like Amazon.
+                                    </v-list-item>
+                                    <v-list-item>Updates shopping cart when an Item has been added to the cart
+                                    </v-list-item>
+                                    <v-list-item>Disables button when an item stock is zero.
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="https://jdelacr.github.io/App-Projects-Vue/Online-Store/Online-store.html">
+                                            Website</v-btn>
+                                        <v-btn color="success" class="weblink"
+                                            href="https://github.com/jdelacr/App-Projects-Vue/blob/master/Online-Store/Online-store.html">
+                                            Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                Vuejs: Shopping List
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>Created a shopping list.
+                                    </v-list-item>
+                                    <v-list-item>Able to add item to the lists along with quantity.
+                                    </v-list-item>
+                                    <v-list-item>Able to remove an item within the lists.
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="https://jdelacr.github.io/App-Projects-Vue/Shopping-list/Shopping-list.html">
+                                            Website</v-btn>
+                                        <v-btn color="success" class="weblink"
+                                            href="https://github.com/jdelacr/App-Projects-Vue/blob/master/Shopping-list/Shopping-list.html">
+                                            Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                Vuejs: Search books
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>Created a lists of books that I have used to learn Vuejs.
+                                    </v-list-item>
+                                    <v-list-item>Filters the book based on the title as the user types
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="https://jdelacr.github.io/App-Projects-Vue/Learn-Vue/Learn-Vue.html">
+                                            Website</v-btn>
+                                        <v-btn color="success" class="weblink"
+                                            href="https://github.com/jdelacr/App-Projects-Vue/blob/master/Learn-Vue/Learn-Vue.html">
+                                            Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                IT 415: Data Visualization
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>Created a variety of visual datas.
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="" disabled>
+                                            Website</v-btn>
+                                        <v-btn color="success" class="weblink"
+                                            href="https://github.com/jdelacr/IT415Tableau">
+                                            Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                SWIFT: SpaceX
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>Lists of rockets from SpaceX.
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="https://github.com/jdelacr/IT415Tableau">
+                                            Website</v-btn>
+                                        <v-btn color="success" class="weblink"
+                                            href="https://github.com/jdelacr/SpaceX">
+                                            Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                ASP.NET: GMU website
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>GMU website immitation.
+                                    </v-list-item>
+                                    <v-list-item>Prospect students are able to submit form for consideration.
+                                    </v-list-item>
+                                    <v-list-item>Administrators are able to login and decide whether to accept the student or not.
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="" disabled>
+                                            Website</v-btn>
+                                        <v-btn color="success" class="weblink"
+                                            href="https://github.com/jdelacr/IT-431-Project2">
+                                            Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                SWIFT: Card Game
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>A mobile game using SWIFT
+                                    </v-list-item>
+                                    <v-list-item>The button flips the cards and determine which one is higher
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="" disabled>
+                                            Website</v-btn>
+                                        <v-btn color="success" class="weblink"
+                                            href="https://github.com/jdelacr/SwiftCard">
+                                            Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                ASP.NET: Online Shopping Replica
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>An immitation of online computer parts store.
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="" disabled>
+                                            Website</v-btn>
+                                        <v-btn color="success" class="weblink"
+                                            href="https://github.com/jdelacr/IT415-Project1">
+                                            Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                C&EN: Periodic Table Quiz
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content>
+                                <v-list>
+                                    <v-list-item>Created A Periodic Table using Vuejs
+                                    </v-list-item>
+                                    <v-list-item>Store scores using Google Firebase
+                                    </v-list-item>
+                                    <v-list-item>Integrated a form for Eloqua
+                                    </v-list-item>
+                                    <v-list-item>
+                                        <v-btn color="info" class="weblink"
+                                            href="https://cen.acs.org/sections/periodic-table-quiz.html">
+                                            Website</v-btn>
+                                        <v-btn color="success" class="weblink"
+                                            href="" disabled>
+                                            Source</v-btn>
+                                    </v-list-item>
+                                </v-list>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                    </v-expansion-panels>
+                </v-container>
+
+
+                <!--Footer-->
+                <v-footer dark padless>
+                    <v-card class="flex" flat tile>
+                        <v-card-text class="cyan">
+                            <v-list-item>
+                                <v-list-item-content>
+                                    <v-list-item-title>
+                                        <h1>Contact</h1>
+                                    </v-list-item-title>
+                                    <v-divider></v-divider>
+                                    <v-list-item-title>Phone: (571)-426-0429</v-list-item-title>
+                                    <v-list-item-title>E-mail: delacruz.janjustyn@gmail.com</v-list-item-title>
+                                    <v-list-item-title>Address: 8194 Rainwater Circle, Manassas, VA 20111
+                                    </v-list-item-title>
+                                    <v-list-item-title>
+                                        <v-btn v-for="(item,i) in icons" :key="i" class="mx-4" dark icon
+                                            v-bind:href="item.link">
+                                            <v-icon size="44px">{{ item.icon }}</v-icon>
+                                        </v-btn>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                        </v-card-text>
+                        <v-card-text class="py-2 white--text text-center">
+                            {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+                        </v-card-text>
+                    </v-card>
+                </v-footer>
+            </v-content>
+        </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            props: {
+                source: String,
+            },
+            data: {
+                collapseOnScroll: true,
+                drawer: false,
+                easing: 'easeInOutCubic',
+                icons: [{
+                    icon: 'mdi-light mdi-linkedin',
+                    link: 'https://www.linkedin.com/in/janjustyn'
+                }, {
+                    icon: 'mdi-github',
+                    link: 'https://github.com/jdelacr'
+                }]
+            },
+            computed: {
+                about() {
+                    const value = '#about'
+                    return value
+                },
+                skill() {
+                    const value = '#skills'
+                    return value
+                },
+                experience() {
+                    const value = '#experience'
+                    return value
+                },
+                projects() {
+                    const value = '#contact'
+                    return value
+                },
+                options() {
+                    return {
+                        duration: 300,
+                        offset: 0,
+                        easing: this.easing,
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
